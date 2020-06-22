@@ -52,8 +52,7 @@ public class Ex02 {
             dias = 12;
         } else if (data.getDayOfWeek() == DayOfWeek.SUNDAY) {
             dias = 11;
-        }
-        
+        }        
         System.out.println("Você tem " + dias + " dias para pagar");
     }
 }
