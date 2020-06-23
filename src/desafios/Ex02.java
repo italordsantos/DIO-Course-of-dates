@@ -6,12 +6,9 @@
 package desafios;
 
 import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Month;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -28,31 +25,31 @@ public class Ex02 {
      * segunda-feira seguinte
      *
      * Crie uma estrutura que receba uma data de vencimento e calcule quantos
-     * dias ele tem para pagar 
-     * 
+     * dias ele tem para pagar
+     *
      * @param args
      */
-    
     public static void main(String[] args) {
-        
+
         Scanner leia = new Scanner(System.in);
-        String dataRecebida, datas[];
-        int dias = 10;
-        
+        String dataRecebida, dataRecebidaVetor[];
+        int diasPagar = 10;
+
         System.out.println("Digite a data de vencimento, formato dd/mm/aaaa");
         dataRecebida = leia.next();
-        
-        datas = dataRecebida.split("/");
-        
-        LocalDate data = LocalDate.of(Integer.parseInt(datas[2]), Integer.parseInt(datas[1]), Integer.parseInt(datas[0]));
-        
-        data = data.plusDays(10);
-        
-        if (data.getDayOfWeek() == DayOfWeek.SATURDAY) {
-            dias = 12;
-        } else if (data.getDayOfWeek() == DayOfWeek.SUNDAY) {
-            dias = 11;
-        }        
-        System.out.println("Você tem " + dias + " dias para pagar");
+
+        dataRecebidaVetor = dataRecebida.split("/");
+
+        Calendar data = new GregorianCalendar(Integer.parseInt(dataRecebidaVetor[2]), Integer.parseInt(dataRecebidaVetor[1]) - 1, Integer.parseInt(dataRecebidaVetor[0]));
+
+        data.add(Calendar.DAY_OF_MONTH, 10);
+
+        if (data.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY) {
+            diasPagar = 12;
+        } else if (data.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) {
+            diasPagar = 11;
+        }
+
+        System.out.println("Você tem " + diasPagar + " dias para pagar");
     }
 }
