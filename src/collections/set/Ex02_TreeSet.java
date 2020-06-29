@@ -11,7 +11,7 @@ import java.util.TreeSet;
  *
  * @author italo
  */
-public class Ex01_TreeSet {
+public class Ex02_TreeSet {
     
     /**
      * Crie um set e execute as seguintes operações

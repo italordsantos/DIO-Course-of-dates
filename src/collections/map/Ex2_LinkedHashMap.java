@@ -11,7 +11,7 @@ import java.util.LinkedHashMap;
  *
  * @author italo
  */
-public class Ex01_LinkedHashMap {
+public class Ex2_LinkedHashMap {
         
     /**
      * Crie um map e execute as seguintes operações:

@@ -5,29 +5,29 @@
  */
 package collections.map;
 
-import java.util.HashMap;
+import java.util.TreeMap;
 
 /**
  *
  * @author italo
  */
-public class Ex01_HashMap {
+public class Ex3_TreeMap {
         
     /**
      * Crie um map e execute as seguintes operações:
-     *      Adicione os 26 estados Brasileiros no map, onde a sigla será a chave e o nome do estado o valor
-     *      Remova o estado de Minas Gerais
-     *      Adicione o Distrito Federal
-     *      Verifique o tamanho do mapa
-     *      Remova o estado do Mato Grosso do Sul usando o nome
-     *      Navegue em todos os registros do map, mostrando no console no seguinte formato: NOME (SIGLA)
-     *      Verifique se o estado de Santa Catarina existe no map buscando por sua sigla (SC)
-     *      Verifique se o estado de Maranhão existe no map buscando por seu nome
+     *  Adicione os 26 estados Brasileiros no map, onde a sigla será a chave e o nome do estado o valor
+     *  Remova o estado de Minas Gerais
+     *  Adicione o Distrito Federal
+     *  Verifique o tamanho do mapa
+     *  Remova o estado do Mato Grosso do Sul usando o nome
+     *  Navegue em todos os registros do map, mostrando no console no seguinte formato: NOME (SIGLA)
+     *  Verifique se o estado de Santa Catarina existe no map buscando por sua sigla (SC)
+     *  Verifique se o estado de Maranhão existe no map buscando por seu nome
      * 
      * @param args 
      */
     public static void main(String[] args) {
-        HashMap<String, String> estados = new HashMap<>();
+        TreeMap<String, String> estados = new TreeMap<>();
         
         System.out.println("-> Adicione os 26 estados Brasileiros no map, onde a sigla será a chave e o nome do estado o valor");
         System.out.println(estados);
@@ -97,7 +97,5 @@ public class Ex01_HashMap {
         System.out.println(estados);
         System.out.println(estados.containsValue("Maranhão"));
         System.out.println("");
-        
-        
     }
 }

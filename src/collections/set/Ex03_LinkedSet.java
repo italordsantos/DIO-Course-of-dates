@@ -11,7 +11,7 @@ import java.util.LinkedHashSet;
  *
  * @author italo
  */
-public class Ex01_LinkedSet {
+public class Ex03_LinkedSet {
     
     /**
      * Crie um set e execute as seguintes operações
