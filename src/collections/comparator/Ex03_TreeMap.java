@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package comparator;
+package collections.comparator;
 
 /**
  *
  * @author italo
  */
-public class Ex02_TreeSet {
+public class Ex03_TreeMap {
     
     /**
      * Crie uma lista de um objeto complexo com as seguintes operações:
