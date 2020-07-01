@@ -5,6 +5,11 @@
  */
 package collections.comparator;
 
+import collections.comparator.exemploaula.Estudante;
+import java.util.Comparator;
+import java.util.TreeMap;
+import java.util.TreeSet;
+
 /**
  *
  * @author italo
@@ -23,6 +28,21 @@ public class Ex03_TreeMap {
      * @param args 
      */
     public static void main(String[] args) {
+        TreeMap<Estudante, Object> listaSemOrdenacao = new TreeMap<>(),
+                           listaOrdemNatural = new TreeMap<>(Comparator.comparingInt(Estudante::getIdade)),
+                           listaOrdemReversa = new TreeMap<>(Comparator.comparingInt(Estudante::getIdade).reversed());
         
+        listaSemOrdenacao.put(new Estudante("Italo", 20), null);
+        listaSemOrdenacao.put(new Estudante("Karol", 19), null);
+        listaSemOrdenacao.put(new Estudante("Bili", 17), null);
+        listaSemOrdenacao.put(new Estudante("Auau", 15), null);
+        listaSemOrdenacao.put(new Estudante("Astoufo", 25), null);
+        
+        listaOrdemNatural.putAll(listaSemOrdenacao);
+        listaOrdemReversa.putAll(listaSemOrdenacao);
+        
+        System.out.println("->Ordene implementando a interface java.util.Compatator no seu objeto complexo");
+        System.out.println(listaOrdemNatural);
+        System.out.println(listaOrdemReversa);
     }
 }
