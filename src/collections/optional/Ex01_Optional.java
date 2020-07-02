@@ -5,6 +5,8 @@
  */
 package collections.optional;
 
+import java.util.Optional;
+
 /**
  *
  * @author italo
@@ -12,7 +14,7 @@ package collections.optional;
 public class Ex01_Optional {
     
     /**
-     * Crie umn optional de um determinado tipo de dado
+     * Crie um optional de um determinado tipo de dado
      *  Crie com estado vazio, estado presente, e com null
      *  Se presente, exiba o valor no console
      *  Se vazio, lance uma exceção IllegalStateException
@@ -24,6 +26,15 @@ public class Ex01_Optional {
      * @param args 
      */
     public static void main(String[] args) {
+        Optional<String> o = Optional.of("Italo");
+        Optional<String> oo = Optional.empty();
+        Optional<String> ooo = Optional.ofNullable(null);
         
+        System.out.println(o.isPresent());
+        System.out.println(oo.isPresent());
+        System.out.println(ooo.isPresent());
+        
+        //Java 14
+        //ifPresentOrElse
     }
 }
