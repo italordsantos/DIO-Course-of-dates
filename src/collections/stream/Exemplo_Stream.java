@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
  *
  * @author italo
  */
-public class Ex01_Stream {
+public class Exemplo_Stream {
     
     public static void main(String[] args) {
         List<String> estudantes = new ArrayList<>();
